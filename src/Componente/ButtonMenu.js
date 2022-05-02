@@ -6,8 +6,8 @@ function ButtonsMenu(){
 
         <React.Fragment>
 
-        <button> Desayuno </button>
-        <button> Almuerzo </button>
+        <button className="buttonDes"> Desayuno </button>
+        <button className="buttonAl"> Almuerzo </button>
 
         </React.Fragment>
     )

@@ -1,8 +1,9 @@
 import React from "react";
+import  "./Client.css"
 
 function Client() {
   return (
-    <form>
+    <form className="formCliente">
       <label>Nombre del cliente</label>
       <input></input>
 

@@ -1,24 +1,27 @@
 import { ButtonsMenu } from "../Componente/ButtonMenu";
 import { Client } from "../Componente/Client";
-import { Menu } from "../Componente/Menu";
+import { ImpMenu } from "../Componente/Menu";
+import {Header} from "../Componente/Header";
+import "../Vistas/mesero.css"
 
 function Mesero(){
-return(
-    <div>
+  return(
+      <div className="Mesero">
 
-    <Client />
-    <ButtonsMenu/>
-    <Menu/>
-        
-    
-    
-    {/*<Pedido/>
-      <input></input>
-    <Observaciones/>
-      <textarea></textarea> */}
+      <Header/>
+      <Client/>
+      <ButtonsMenu/>
+      <ImpMenu/>
+          
       
-    </div>
-)
+      
+      {/*<Pedido/>
+        <input></input>
+      <Observaciones/>
+        <textarea></textarea> */}
+        
+      </div>
+  )
 
 
 }

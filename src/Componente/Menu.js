@@ -1,6 +1,7 @@
 import React from 'react'
+import menu from '../menu.json'
 
-const menuBreakfast = [
+/* const menuBreakfast = [
 
 {text:'Café americano'},
 {text:'Café con leche'},
@@ -8,17 +9,28 @@ const menuBreakfast = [
 {text:'Jugo de frutas natural'}
  
 ]
-
+ */
 
     
-function Menu(props){
+function ImpMenu(props){
 
     return(
-        
-        <li>
-          {menuBreakfast.map(impMenu=>(<p>{impMenu.text}</p>))}  
-        </li>
+      <>
 
+        {menu.map((comida)=>(
+          <button className='ButtonPlato'>{comida.Plato}${comida.Precio} </button>
+        ))}
+
+      </>
+  
     )
-}
-export {Menu}
+    
+}  
+export {ImpMenu}
+
+
+
+ /*   {menu.map((plato)=> (
+          <button key = {plato.id}> text={`${plato.Preparation}`}</button>
+        )
+        )} */
