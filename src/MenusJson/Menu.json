@@ -1,4 +1,4 @@
- [
+ {"Menu":[
     {   "id" : 1,
         "Plato" : "Café americano",
         "Precio" : "5",
@@ -72,13 +72,5 @@
         "Tipo" : "Bebestibles", 
         "Precio" : "",
         "Horario" : "Almuerzo"
-    },
-    {   "id" : 13,
-        "Plato" : "",
-        "Tipo" : "Bebestibles", 
-        "Precio" : "",
-        "Horario" : "Almuerzo"
     }
-
-
-]   
+]}

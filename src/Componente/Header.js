@@ -1,6 +1,6 @@
 import React from "react";
 import hamburguesafeliz from "../Imagenes/hamburguesafeliz.png"
-import "../header.css"
+import "./header.css"
 
 
 function Header(props){
@@ -8,7 +8,7 @@ function Header(props){
         <div className="header">
             <h1 className="happyBurger"> Happy Burger! </h1>
             
-            <img src={hamburguesafeliz} alt=""className="hamburguesa"></img>
+            <img src={hamburguesafeliz} alt="hamburguesa feliz"className="hamburguesa"></img>
             
          </div>
         

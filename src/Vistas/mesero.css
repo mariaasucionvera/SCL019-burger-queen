@@ -1,6 +1,22 @@
-.Mesero{
-
-   /* display: grid;
-    grid-template-columns: auto,auto,auto;
-     grid-template-rows: auto,auto; */
+@media (min-width: 768px){
+   .Mesero{
+ 
+      display: grid;
+      grid-template-rows: repeat(9,100px);
+      grid-template-columns:repeat(4,200px) ;
+     
+   }
 }
+
+@media (min-width: 1024px){
+
+   .Mesero{
+ 
+      display: grid;
+      grid-template-rows: repeat(14,90px);
+      grid-template-columns:repeat(5,1fr) ;
+      
+   }
+
+}
+
