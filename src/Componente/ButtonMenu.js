@@ -14,21 +14,27 @@ const ButtonsMenu = () => {
 
     console.log(datapedido)
     const agregarAlPerido =(item)=>{
-        //console.log("holaproductos")
         setDatapedido([...datapedido,{...item}])
          
     }
 
-    function eliminarProducto(id){
+    //Función botón eliminar producto del pedido
 
-
+    const eliminarProducto =(id)=>{
+        setDatapedido(datapedido.filter((item) => item !== id))
+       
     }
+
+    // Total del pedido
+
+    const total = datapedido.reduce((a,b) => a + parseInt(b.Precio,10), 0);
+   
 
     //--------------------------------ESTADO DEL MENÚ---------------------------------------- 
 
-   const [Plato, setPlato] = useState(Menu.Menu);
+    const [Plato, setPlato] = useState(Menu);
   
-    // funciones para filtrar por tipo de menú
+    // Funciones para filtrar por tipo de menú
 
     function filtrarDesayuno(){
        const Desayuno = Plato.filter(plate => plate.Horario==="Desayuno")
@@ -44,7 +50,6 @@ const ButtonsMenu = () => {
 
     return(
         <>
-
             <div className="contenedor">
                 
                 <div className="ButtonContent">        
@@ -55,10 +60,12 @@ const ButtonsMenu = () => {
                 <div className="MenuContent">
                     <div className="menuDesayuno">
                 
-                        {Plato.map(item=> (
+                        {Plato.map((item)=> (
                             <button onClick={()=>agregarAlPerido(item)} className='ButtonPlato' key={item.id} >
                                     {item.Plato}${item.Precio} 
                             </button>
+
+                        
                         ))}
 
                     </div>
@@ -95,24 +102,27 @@ const ButtonsMenu = () => {
 
                 {datapedido.map((item,id)=>(
                     <>
-                    <li key={id}>{item.Plato} ${item.Precio} </li>
-                    <button>+</button>
-                    <button onClick={eliminarProducto(id)}>-</button>
+                        <li key={id}>
+
+                            {item.Plato} 
+                            ${item.Precio}
+                             <button onClick={()=>eliminarProducto(item)} key={id}>Eliminar</button>
+                            
+                        </li>
+                    
                     </>
+                    
                 ))}
 
-                <p>total</p>
+                <p>Total: ${total} </p>
                 <button>Enviar</button>
 
             </div>
 
-            
-
-
-    </>
+        </>
         
 );
     
-};
+}
 
 export {ButtonsMenu};
