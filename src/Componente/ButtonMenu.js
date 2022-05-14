@@ -1,18 +1,41 @@
 
 import React,{useState} from "react";
 import "../Componente/ButtonMenu.css"
-import Menu from '../MenusJson/Menu.json'
+import Desayuno from '../MenusJson/Desayuno.json'
+import Almuerzo from '../MenusJson/Almuerzo.json'
+import {EnviarPedido } from'./firebase/firebase.js'
 
 
 
 const ButtonsMenu = () => {
 
+    //-------------------------ESTADO DEL FORMULARIO---------------------------------
+    const [dataCliente,setDatacliente] = useState("")
+    const [selectMesa,setSelectMesa]= useState("")
+    const [dataMeserx,setDatameserx]= useState("")
+    
+
+    const guardarClient =(e)=>{
+        setDatacliente(e.target.value)
+            
+    }
+
+    const enviarMesa =(e)=>{
+        setSelectMesa(e.target.value)
+
+    }
+
+    const guardarMeserx =(e)=>{
+        setDatameserx(e.target.value)
+
+    }
+    //console.log(dataCliente)
 
     //------------------------------ESTADO DEL PEDIDO--------------------------------------
 
     const [datapedido,setDatapedido] = useState([])
 
-    console.log(datapedido)
+    //console.log(datapedido)
     const agregarAlPerido =(item)=>{
         setDatapedido([...datapedido,{...item}])
          
@@ -30,41 +53,29 @@ const ButtonsMenu = () => {
     const total = datapedido.reduce((a,b) => a + parseInt(b.Precio,10), 0);
    
 
-    //--------------------------------ESTADO DEL MENÚ---------------------------------------- 
-
-    const [Plato, setPlato] = useState(Menu);
-  
-    // Funciones para filtrar por tipo de menú
-
-    function filtrarDesayuno(){
-       const Desayuno = Plato.filter(plate => plate.Horario==="Desayuno")
-       setPlato (Desayuno)
-    }
-
-    function filtrarAlmuerzo(){
-        const Almuerzo = Plato.filter(plate => plate.Horario==="Almuerzo")
-        setPlato (Almuerzo)
-    }
- 
-
-
     return(
-        <>
+        <div className="Mesero">
             <div className="contenedor">
                 
-                <div className="ButtonContent">        
-                    <button  className="buttonMenu" onClick={filtrarDesayuno} > Desayuno </button>
-                    <button  className="buttonMenu" onClick={filtrarAlmuerzo}> Almuerzo </button>
-                </div> 
-
+            
                 <div className="MenuContent">
-                    <div className="menuDesayuno">
-                
-                        {Plato.map((item)=> (
+                    <div className="MenuDesayuno">
+                        <h2>Menu Desayuno</h2>
+                        {Desayuno.map((item)=> (
                             <button onClick={()=>agregarAlPerido(item)} className='ButtonPlato' key={item.id} >
                                     {item.Plato}${item.Precio} 
                             </button>
+                        
+                        ))}
 
+                    </div>
+
+                    <div className="MenuAlmuerzo">
+                            <h2>Menu Almuerzo</h2>
+                        {Almuerzo.map((item)=> (
+                            <button onClick={()=>agregarAlPerido(item)} className='ButtonPlato' key={item.id} >
+                                    {item.Plato}${item.Precio} 
+                            </button>
                         
                         ))}
 
@@ -75,51 +86,51 @@ const ButtonsMenu = () => {
             </div>
 
             <div className="pedido">
-                <h1>Pedido</h1>
+                
                 <form className="formCliente">
 
                     <div className="clientName">
-                        <label>Cliente </label>
-                        <input></input>
+                        <label className="label">Cliente </label>
+                        <input className="inputClient" onChange={guardarClient} value={dataCliente} ></input>
                     </div>
 
-                    <div className="clientName">
-                        <label>Mesero </label>
-                        <input></input>
+                    <div className="meserxName">
+                        <label className="label">Mesero </label>
+                        <input className="inputMeserx" onChange={guardarMeserx} value={dataMeserx}></input>
                     </div>
 
                     <div className="Select">
                         <label>Seleccione una mesa </label>
-                        <select>
-                        <option>Mesa 1 </option>
-                        <option>Mesa 2 </option>
-                        <option>Mesa 3 </option>
-                        <option>Mesa 4 </option>
-                        <option>Mesa 5 </option>
+                        <select onChange={enviarMesa}>
+                        <option value="mesa 1">Mesa 1 </option>
+                        <option value="mesa 2">Mesa 2 </option>
+                        <option value="mesa 3">Mesa 3 </option>
+                        <option value="mesa 4">Mesa 4 </option>
+                        <option value="mesa 5">Mesa 5 </option>
                         </select>
                     </div>
                 </form>
-
-                {datapedido.map((item,id)=>(
-                    <>
-                        <li key={id}>
-
-                            {item.Plato} 
-                            ${item.Precio}
-                             <button onClick={()=>eliminarProducto(item)} key={id}>Eliminar</button>
+                <div className="seccionPedido">
+                    <h2 className="tituloPedido">Pedido</h2>
+                    {datapedido.map((item,id)=>(
+                        <>
                             
-                        </li>
-                    
-                    </>
-                    
-                ))}
-
-                <p>Total: ${total} </p>
-                <button>Enviar</button>
-
+                            <div className="itemPedido" key={id}>
+                                {item.Plato} 
+                                ${item.Precio}
+                            </div>
+                            <button className="buttonBasurero" onClick={()=>eliminarProducto(item)} key={id}> <i class="fa-solid fa-trash-can"></i></button>
+                        
+                        </>
+                        
+                    ))}
+                
+                    <h3 className="total">Total: ${total} </h3>
+                    <button onClick={()=>EnviarPedido(dataCliente,dataMeserx,datapedido,selectMesa)}>Enviar</button>
+                </div>
             </div>
 
-        </>
+        </div>
         
 );
     

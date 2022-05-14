@@ -4,9 +4,10 @@ import {Header } from "../Componente/Header";
 /* import Pedido from "../Pedido"; */
 import "../Vistas/mesero.css"
 
-function Mesero(){
+const Mesero =()=>{
 
   return(
+    
       <div className="Mesero">
 
       <Header/>

@@ -1,31 +1,9 @@
- [
-    {   "id" : 1,
-        "Plato" : "Café americano",
-        "Precio" : "5",
-        "Horario" : "Desayuno"
-    },
-    {
-        "id" : 2,
-        "Plato" : "Café con leche",
-        "Precio" : "7",
-        "Horario" : "Desayuno"
-    },
-    {   
-        "id" : 3,
-        "Plato" : "Sandwich de jamón y queso",
-        "Precio" : "10",
-        "Horario" : "Desayuno"
-    },
-    {   "id" : 4,
-        "Plato" : "Jugo de frutas natural",
-        "Precio" : "7",
-        "Horario" : "Desayuno"
-    },
+[
     {   "id" : 5,
-        "Plato" : "Hamburguesa simple",
-        "Tipo" : "Hamburguesas",
-        "Precio" : "10",
-        "Horario" : "Almuerzo"
+    "Plato" : "Hamburguesa simple",
+    "Tipo" : "Hamburguesas",
+    "Precio" : "10",
+    "Horario" : "Almuerzo"
     },
     {   "id" : 6,
         "Plato" : "Hamburguesa doble",
@@ -72,5 +50,5 @@
         "Tipo" : "Bebestibles", 
         "Precio" : "5",
         "Horario" : "Almuerzo"
-    }
+    } 
 ]
