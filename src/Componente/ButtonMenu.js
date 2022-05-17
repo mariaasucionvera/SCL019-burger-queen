@@ -3,8 +3,10 @@ import React,{useState} from "react";
 import "../Componente/ButtonMenu.css"
 import Desayuno from '../MenusJson/Desayuno.json'
 import Almuerzo from '../MenusJson/Almuerzo.json'
-import {EnviarPedido } from'./firebase/firebase.js'
+import { EnviarPedido } from "../firebase/firebase";
 
+//import { db } from "../firebase/firebase";
+//import { collection, addDoc } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js";
 
 
 const ButtonsMenu = () => {
@@ -51,7 +53,39 @@ const ButtonsMenu = () => {
     // Total del pedido
 
     const total = datapedido.reduce((a,b) => a + parseInt(b.Precio,10), 0);
-   
+    
+    //Función para enviar pedido a firestore
+
+    /* const EnviarPedido =(dataCliente,dataMeserx,selectMesa,datapedido)=>{
+        console.log("el pedido")
+        addDoc(collection(db,"pedidos"),{
+                dataCliente,
+                dataMeserx,
+                selectMesa,
+                datapedido,
+                
+
+        });
+    } */
+ 
+
+    /*  const EnviarPedido = async () => {
+        console.log("envio a db");
+        try {
+          await addDoc(collection(db, "pedidos"), {
+            client: dataCliente,
+            table: selectMesa,
+            order: datapedido,
+            meserx: dataMeserx,
+            date: new Date(),
+            status: "Pendiente",
+          });
+        } catch (error) {
+          throw new Error(error);
+        }
+    };
+       */
+
 
     return(
         <div className="Mesero">
@@ -62,9 +96,9 @@ const ButtonsMenu = () => {
                     <div className="MenuDesayuno">
                         <h2>Menu Desayuno</h2>
                         {Desayuno.map((item)=> (
-                            <button onClick={()=>agregarAlPerido(item)} className='ButtonPlato' key={item.id} >
-                                    {item.Plato}${item.Precio} 
-                            </button>
+                            <span onClick={()=>agregarAlPerido(item)} className='ButtonPlato' key={item.id} >
+                                    {item.Plato}   ${item.Precio} 
+                            </span>
                         
                         ))}
 
@@ -73,9 +107,9 @@ const ButtonsMenu = () => {
                     <div className="MenuAlmuerzo">
                             <h2>Menu Almuerzo</h2>
                         {Almuerzo.map((item)=> (
-                            <button onClick={()=>agregarAlPerido(item)} className='ButtonPlato' key={item.id} >
-                                    {item.Plato}${item.Precio} 
-                            </button>
+                            <span onClick={()=>agregarAlPerido(item)} className='ButtonPlato' key={item.id} >
+                                    {item.Plato}   ${item.Precio} 
+                            </span>
                         
                         ))}
 
@@ -132,7 +166,7 @@ const ButtonsMenu = () => {
 
         </div>
         
-);
+    );
     
 }
 
