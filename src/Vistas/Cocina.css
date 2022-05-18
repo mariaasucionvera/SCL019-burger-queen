@@ -1,4 +1,39 @@
-.orderContainer{
-    background-color: aliceblue;
+.vistaCocina{
+    display:flex;
+    flex-wrap:wrap;
+   /*  display:grid; */
+    grid-template-rows: repeat(5,20%);
+    grid-template-columns:repeat(3,25%) ;
 
 }
+.titulos{
+    width: 100%;
+    text-align: center;
+   /*  grid-row: 2;
+    grid-column: 1 /span 4;
+   position: initial; */
+
+
+}
+.header{
+    grid-column: 1 /span 4;
+    grid-row: 1;
+
+
+}
+
+.orderContainer{
+    margin:0px auto;
+    display:grid;
+    grid-template-columns:repeat(3,3fr);
+    grid-template-rows: repeat(2,3fr);
+  /*  grid-column:1/span 5; */
+    /* display: flex; */
+    position:relative;
+    justify-content: row;
+  
+
+}
+/* .pedido{
+   padding: 20px;
+} */

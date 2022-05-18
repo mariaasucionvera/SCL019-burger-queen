@@ -5,11 +5,7 @@ import Desayuno from '../MenusJson/Desayuno.json'
 import Almuerzo from '../MenusJson/Almuerzo.json'
 import { EnviarPedido } from "../firebase/firebase";
 
-//import { db } from "../firebase/firebase";
-//import { collection, addDoc } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js";
-
-
-const ButtonsMenu = () => {
+const VistaMesero = () => {
 
     //-------------------------ESTADO DEL FORMULARIO---------------------------------
     const [dataCliente,setDatacliente] = useState("")
@@ -37,7 +33,7 @@ const ButtonsMenu = () => {
 
     const [datapedido,setDatapedido] = useState([])
 
-    //console.log(datapedido)
+   
     const agregarAlPerido =(item)=>{
         setDatapedido([...datapedido,{...item}])
          
@@ -54,41 +50,9 @@ const ButtonsMenu = () => {
 
     const total = datapedido.reduce((a,b) => a + parseInt(b.Precio,10), 0);
     
-    //Función para enviar pedido a firestore
-
-    /* const EnviarPedido =(dataCliente,dataMeserx,selectMesa,datapedido)=>{
-        console.log("el pedido")
-        addDoc(collection(db,"pedidos"),{
-                dataCliente,
-                dataMeserx,
-                selectMesa,
-                datapedido,
-                
-
-        });
-    } */
- 
-
-    /*  const EnviarPedido = async () => {
-        console.log("envio a db");
-        try {
-          await addDoc(collection(db, "pedidos"), {
-            client: dataCliente,
-            table: selectMesa,
-            order: datapedido,
-            meserx: dataMeserx,
-            date: new Date(),
-            status: "Pendiente",
-          });
-        } catch (error) {
-          throw new Error(error);
-        }
-    };
-       */
-
-
+   
     return(
-        <div className="Mesero">
+        <>
             <div className="contenedor">
                 
             
@@ -163,11 +127,11 @@ const ButtonsMenu = () => {
                     <button onClick={()=>EnviarPedido(dataCliente,dataMeserx,datapedido,selectMesa)}>Enviar</button>
                 </div>
             </div>
-
-        </div>
+        </>
+        
         
     );
     
 }
 
-export {ButtonsMenu};
+export {VistaMesero};

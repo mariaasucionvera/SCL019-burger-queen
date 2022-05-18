@@ -1,5 +1,5 @@
 //import { useState } from "react";
-import { ButtonsMenu } from "../Componente/ButtonMenu";
+import { VistaMesero } from "../Componente/VistaMesero";
 import {Header } from "../Componente/Header";
 /* import Pedido from "../Pedido"; */
 import "../Vistas/mesero.css"
@@ -11,7 +11,7 @@ const Mesero =()=>{
       <div className="Mesero">
 
       <Header/>
-      <ButtonsMenu/>
+      <VistaMesero/>
         
       </div>
   )

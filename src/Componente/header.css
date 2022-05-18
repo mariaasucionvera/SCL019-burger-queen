@@ -1,15 +1,14 @@
-@media screen and (min-width: 768px){
-.header{
-  grid-row: 1/ span 2;
-  grid-column: 1 /span 5;
+.header {
+/*   grid-row: 1;
+  grid-column: 1 /span 5; */
   display: flex;
   align-items: center;
   justify-content: center;
-
+}
 /*   display: grid;
   grid-template-columns: repeat(12,1fr); */
- 
-}
+  
+
 .hamburguesa{
 
     /*  grid-column-start:7; */
@@ -21,49 +20,14 @@
 .happyBurger{
   font-family: 'Alfa Slab One', cursive;
   font-family: 'Fredoka One', cursive;
- /*  font-family: 'Skranji', cursive; */
+  /*  font-family: 'Skranji', cursive; */
   letter-spacing: 2px;
-  font-size:xx-large
+  font-size:xx-large;
 
-   /*  grid-column-start:5;
+    /*  grid-column-start:5;
     grid-column-end: 7; */
 
-   
-}
-}
-
-@media screen and (min-width: 1024px){
-  .header{
-    grid-row: 1/ span 2;
-    grid-column: 1 /span 9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  
-  /*   display: grid;
-    grid-template-columns: repeat(12,1fr); */
-   
-  }
-  .hamburguesa{
-  
-      /*  grid-column-start:7; */
-    /*   grid-row-start: 1; */
-      max-width: 60px;
-      
-  
-  }
-  .happyBurger{
-    font-family: 'Alfa Slab One', cursive;
-    font-family: 'Fredoka One', cursive;
-   /*  font-family: 'Skranji', cursive; */
-    letter-spacing: 2px;
-    font-size:xx-large;
-  
-     /*  grid-column-start:5;
-      grid-column-end: 7; */
-  
 
 
 
-  }
 }

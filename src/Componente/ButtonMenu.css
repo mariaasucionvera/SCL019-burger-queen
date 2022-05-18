@@ -1,35 +1,11 @@
-@media (min-width: 1024px){
-    .buttonMenu{
-        background-color: black;
-    }
-    .Mesero{
-        color: aliceblue;
-        font-family: 'Open Sans', sans-serif;
-      
-    }
-    .contenedor{
-        grid-row: 1/span 8 ;
-        grid-column: 1 /span 4;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-
-    } 
-    .ButtonContent{
-
-        display: flex;
-        align-items: center;
-        align-content: center;
-        text-align: center;
-
-    }
+/* @media (min-width: 1024px){ */
+    
     .MenuContent{
-
-        display: grid;
-        grid-template-rows:2;
-
-
+        grid-column: 1/span 3;
+        grid-row:2/span 5;
+        padding: 30px;
     }
+
     .MenuDesayuno{
         grid-row:2;
         margin-left: auto;
@@ -57,10 +33,10 @@
     }
 
     .pedido{
-
-        grid-column: 5/ span 5;
-        grid-row: 1/ span 5 ;
-       /*  padding-left: 10%; */   
+/* 
+        grid-column: 3/ span 4;
+        grid-row: 2; */
+        padding: 30px; 
     }
 
     .formCliente{
@@ -70,8 +46,8 @@
         align-content: center;
         column-gap: normal;
         position: relative; 
-
     }
+
     .clientName,.meserxName{
         display: flex;
         flex-direction: column;
@@ -82,12 +58,40 @@
         margin: 10px;
 
     }
+
     .seccionPedido{
-       
         position:relative;
-       /*  margin-left: 20%; */
+        
+    }
+ 
+    /* 
+     .contenedor{
+       grid-row: 1/span 8 ;
+        grid-column: 1 /span 4; 
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+
+    } 
+    */
+    .ButtonContent{
+
+        display: flex;
+        align-items: center;
+        align-content: center;
+        text-align: center;
 
     }
+    
+   
+
+    
+
+    
+
+    
+   
+   
     .buttonBasurero{
        
         margin-bottom:10% ;
@@ -117,7 +121,7 @@
         right: 0%;
        
     }
-}
+/* } */
 
 /* @media (min-width: 768px){
     .Mesero{
