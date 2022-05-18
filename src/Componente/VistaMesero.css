@@ -1,21 +1,26 @@
-/* @media (min-width: 1024px){ */
-    
+
+   .vistaMesero{
+        display: grid;
+        grid-template-columns: repeat(2,3fr);
+
+    }
+
+    .header{
+        color:white;
+        width: 100%;
+        text-align: center; 
+    }
     .MenuContent{
-        grid-column: 1/span 3;
-        grid-row:2/span 5;
+     
         padding: 30px;
     }
 
     .MenuDesayuno{
-        grid-row:2;
-        margin-left: auto;
-        margin-right:auto;
+       
 
     }
     .MenuAlmuerzo{
-        grid-row: 3;
-        margin-left: auto;
-        margin-right:auto;
+      
     }
 
     .ButtonPlato{
@@ -32,10 +37,7 @@
         color: black;
     }
 
-    .pedido{
-/* 
-        grid-column: 3/ span 4;
-        grid-row: 2; */
+    .pedidoMesero{
         padding: 30px; 
     }
 
@@ -82,38 +84,39 @@
         text-align: center;
 
     }
-    
-   
-
-    
-
-    
-
-    
-   
    
     .buttonBasurero{
        
-        margin-bottom:10% ;
+       /*  margin-bottom:10% ;
         padding: 10px;
         color: aliceblue;
         border-radius: 20px;
         background-color:transparent;
         border-style:solid;
-        border-color: aliceblue;
+        border-color: aliceblue; */
       
     }
+
     .itemPedido{
-        line-height: 50px;
+        display: grid;
+        grid-template-columns: repeat(1fr,1fr);
+
+    }
+    .preparation{
+       
+        font-style: oblique;
+        font-weight: bold;
+
+     /*    line-height: 50px;
         padding: 5%;
         display: inline-block;
         text-align-last: left;
-        font-weight: bold;
-        font-style: oblique;
+        
+       
         width: 250px;
         height: 50px;
         border-bottom:solid;
-        border-color: beige;
+        border-color: beige; */
         
     }
     .total{

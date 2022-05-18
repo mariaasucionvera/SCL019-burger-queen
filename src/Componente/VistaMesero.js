@@ -1,6 +1,6 @@
 
 import React,{useState} from "react";
-import "../Componente/ButtonMenu.css"
+import "../Componente/VistaMesero.css"
 import Desayuno from '../MenusJson/Desayuno.json'
 import Almuerzo from '../MenusJson/Almuerzo.json'
 import { EnviarPedido } from "../firebase/firebase";
@@ -52,38 +52,34 @@ const VistaMesero = () => {
     
    
     return(
-        <>
-            <div className="contenedor">
-                
-            
-                <div className="MenuContent">
-                    <div className="MenuDesayuno">
-                        <h2>Menu Desayuno</h2>
-                        {Desayuno.map((item)=> (
-                            <span onClick={()=>agregarAlPerido(item)} className='ButtonPlato' key={item.id} >
-                                    {item.Plato}   ${item.Precio} 
-                            </span>
-                        
-                        ))}
-
-                    </div>
-
-                    <div className="MenuAlmuerzo">
-                            <h2>Menu Almuerzo</h2>
-                        {Almuerzo.map((item)=> (
-                            <span onClick={()=>agregarAlPerido(item)} className='ButtonPlato' key={item.id} >
-                                    {item.Plato}   ${item.Precio} 
-                            </span>
-                        
-                        ))}
-
-                    </div>
+        <div className="vistaMesero">
+            <div className="MenuContent">
+                    
+                <div className="MenuDesayuno">
+                    <h2>Menu Desayuno</h2>
+                    {Desayuno.map((item)=> (
+                        <span onClick={()=>agregarAlPerido(item)} className='ButtonPlato' key={item.id} >
+                                {item.Plato}   ${item.Precio} 
+                        </span>
+                    
+                    ))}
 
                 </div>
 
+                <div className="MenuAlmuerzo">
+                        <h2>Menu Almuerzo</h2>
+                    {Almuerzo.map((item)=> (
+                        <span onClick={()=>agregarAlPerido(item)} className='ButtonPlato' key={item.id} >
+                                {item.Plato}   ${item.Precio} 
+                        </span>
+                    
+                    ))}
+
+                </div> 
+
             </div>
 
-            <div className="pedido">
+            <div className="pedidoMesero">
                 
                 <form className="formCliente">
 
@@ -110,24 +106,25 @@ const VistaMesero = () => {
                 </form>
                 <div className="seccionPedido">
                     <h2 className="tituloPedido">Pedido</h2>
-                    {datapedido.map((item,id)=>(
-                        <>
+                    <div className="itemPedido">
+                        {datapedido.map((item,id)=>(
+                            <>
+                                
+                                <div className="preparation" key={id}>
+                                    {item.Plato} 
+                                    ${item.Precio}
+                                </div>
+                                <button className="buttonBasurero" onClick={()=>eliminarProducto(item)} key={id}> <i class="fa-solid fa-trash-can"></i></button>
                             
-                            <div className="itemPedido" key={id}>
-                                {item.Plato} 
-                                ${item.Precio}
-                            </div>
-                            <button className="buttonBasurero" onClick={()=>eliminarProducto(item)} key={id}> <i class="fa-solid fa-trash-can"></i></button>
-                        
-                        </>
-                        
-                    ))}
-                
+                            </>
+                            
+                        ))}
+                    </div>
                     <h3 className="total">Total: ${total} </h3>
                     <button onClick={()=>EnviarPedido(dataCliente,dataMeserx,datapedido,selectMesa)}>Enviar</button>
                 </div>
             </div>
-        </>
+        </div>
         
         
     );

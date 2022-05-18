@@ -9,8 +9,12 @@
 }
  */
 /* @media (min-width: 1024px){ */
-
-   .Mesero{
+  .Mesero{
+      background-color: black;
+      color: white;
+      font-family: 'Open Sans', sans-serif;
+  }
+  /*  .Mesero{
       background-color: black;
       display: grid;
       grid-template-columns: repeat(4, 2fr);
@@ -19,7 +23,7 @@
       font-family: 'Open Sans', sans-serif;
        
      
-   }
+   } */
 
 /* } */
 

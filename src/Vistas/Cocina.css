@@ -1,39 +1,56 @@
 .vistaCocina{
+    background-color: black;
     display:flex;
     flex-wrap:wrap;
-   /*  display:grid; */
-    grid-template-rows: repeat(5,20%);
-    grid-template-columns:repeat(3,25%) ;
 
 }
 .titulos{
+    color: white;
     width: 100%;
     text-align: center;
-   /*  grid-row: 2;
-    grid-column: 1 /span 4;
-   position: initial; */
-
 
 }
 .header{
-    grid-column: 1 /span 4;
-    grid-row: 1;
-
+    color:white;
+    width: 100%;
+    text-align: center; 
 
 }
 
 .orderContainer{
+    
+    color: gray;
     margin:0px auto;
     display:grid;
     grid-template-columns:repeat(3,3fr);
     grid-template-rows: repeat(2,3fr);
-  /*  grid-column:1/span 5; */
-    /* display: flex; */
     position:relative;
     justify-content: row;
   
 
 }
-/* .pedido{
-   padding: 20px;
-} */
+
+
+.pedido{
+    background-color: bisque;
+    border-radius: 10px;
+    margin: 10px;
+    display:grid ;
+    grid-template-rows:.5fr 2fr;  
+    padding: 10px;
+    border-style: solid;
+    border-color: rgba(199, 187, 19, 0.842);
+} 
+
+.formPedido{
+    font-family: 'Skranji', cursive;
+    display: grid;
+    grid-template-rows: repeat(3,20px);
+    padding-left: 20px;
+}
+
+.SectionItems{
+    padding:40px 20px 20px 20px; 
+    
+
+}

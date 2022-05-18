@@ -30,30 +30,27 @@ const PedidosCocina =()=>{
         <div className="orderContainer">
             {pedidos.map((element)=>(
 
-                <section key={element.id} >
-                    
-                    <div className="pedido">
-
-                        <div className="formPedido">
-                            <p>Cliente: {element.client}</p>
-                            <p>Meserx: {element.meserx}</p>
-                            <p>Mesa: {element.order}</p>
-                        </div>
-
-                        <div className="formItems">
-                            {element.table.map((item) => (
-
-                                <div key={item.id}>
-                                    <li>
-                                        {item.Plato}
-                                        {item.precio}
-                                    </li>
-                                </div>
-                            ))
-                            }
-                        </div>
-
+                <section className="pedido" key={element.id} >
+                
+                    <div className="formPedido">
+                        <p>Cliente: {element.client}</p>
+                        <p>Meserx: {element.meserx}</p>
+                        <p>Mesa: {element.order}</p>
                     </div>
+
+                    <div className="SectionItems">
+                        {element.table.map((item) => (
+
+                            <div key={item.id}>
+                                <li>
+                                    {item.Plato}
+                                    {item.precio}
+                                </li>
+                            </div>
+                        ))
+                        }
+                    </div>
+   
                 </section>
                 
             ))}

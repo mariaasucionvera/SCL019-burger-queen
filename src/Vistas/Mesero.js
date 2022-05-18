@@ -8,12 +8,12 @@ const Mesero =()=>{
 
   return(
     
-      <div className="Mesero">
+    <div className="Mesero">
 
       <Header/>
       <VistaMesero/>
-        
-      </div>
+      
+    </div>
   )
 
 
