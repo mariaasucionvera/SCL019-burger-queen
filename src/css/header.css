@@ -1,0 +1,33 @@
+.header {
+  padding-top: 5%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*   display: grid;
+  grid-template-columns: repeat(12,1fr); */
+  
+
+.hamburguesa{
+
+    /*  grid-column-start:7; */
+  /*   grid-row-start: 1; */
+    max-width: 60px;
+    
+
+}
+.happyBurger{
+  font-family: 'Alfa Slab One', cursive;
+  font-family: 'Fredoka One', cursive;
+  /*  font-family: 'Skranji', cursive; */
+  letter-spacing: 2px;
+  font-size: 300%;
+
+    /*  grid-column-start:5;
+    grid-column-end: 7; */
+
+
+
+
+}
