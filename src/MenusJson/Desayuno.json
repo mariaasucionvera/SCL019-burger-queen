@@ -1,24 +1,24 @@
  [
     {   "id" : 1,
         "Plato" : "Café americano",
-        "Precio" : "5",
+        "Precio" : "1500",
         "Horario" : "Desayuno"
     },
     {
         "id" : 2,
         "Plato" : "Café con leche",
-        "Precio" : "7",
+        "Precio" : "2500",
         "Horario" : "Desayuno"
     },
     {   
         "id" : 3,
         "Plato" : "Sandwich de jamón y queso",
-        "Precio" : "10",
+        "Precio" : "3500",
         "Horario" : "Desayuno"
     },
     {   "id" : 4,
         "Plato" : "Jugo de frutas natural",
-        "Precio" : "7",
+        "Precio" : "1500",
         "Horario" : "Desayuno"
     }
     

@@ -35,12 +35,13 @@ const PedidosCocina =()=>{
     }
 
     return (
+       
         <div className="orderContainer">
             
             {pedidos.map((element)=>(
                 
                 <section className="pedido" key={element.id} >
-                    <button onClick={()=>borrarPedido(element.id)}>X</button>
+                    <button  className="borrar" onClick={()=>borrarPedido(element.id)}>X</button>
                     <div className="formPedido">
                         <p>Cliente: {element.client}</p>
                         <p>Meserx: {element.meserx}</p>

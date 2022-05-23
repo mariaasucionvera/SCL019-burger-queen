@@ -78,6 +78,7 @@
     grid-column: 2;
     margin-bottom:20%;
     padding: 10px;
+    margin-left: 15%;
     color: aliceblue;
     border-radius: 20px;
     background-color:transparent;
@@ -122,6 +123,37 @@
     border-top-style: solid;
     font-size: 150%;
 
+}
+
+.enviar{
+
+    display:flex;
+    justify-content: center;
+    background-color: black;
+    color: beige;
+    border-color: #303033;
+    border-style: solid;
+    border-radius: 10%;
+    font-family:'Skranji', cursive;
+    font-size: 120%;
+    padding: 3%;
+    width: 50%;
+    
+}
+.link{
+
+    position: relative;
+    left:85%;
+    background-color:#ffce6d;
+    color:#303033;
+    border-color: #303033;
+    border-style: solid;
+    border-radius: 10%;
+    font-family:'Skranji', cursive;
+    font-size: 120%;
+    padding: 1%;
+    margin-top: 5%;
+    text-decoration: none;
 }
 
 
