@@ -1,6 +1,6 @@
 import React from "react";
 import hamburguesafeliz from "../Imagenes/hamburguesafeliz.png"
-import "./header.css"
+import "../css/header.css"
 
 
 function Header(props){

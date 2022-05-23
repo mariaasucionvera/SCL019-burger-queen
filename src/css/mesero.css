@@ -10,7 +10,9 @@
  */
 /* @media (min-width: 1024px){ */
   .Mesero{
-      background-color: black;
+      display:flex;
+      flex-wrap:wrap;
+      background-color: #303030;
       color: white;
       font-family: 'Open Sans', sans-serif;
   }

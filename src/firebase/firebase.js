@@ -37,6 +37,7 @@ export const EnviarPedido = async (dataCliente,dataMeserx,selectMesa,datapedido)
   } catch (error) {
     throw new Error(error);
   }
+  window.location.reload()
 } 
 
  /* export const EnviarPedido =(dataCliente,dataMeserx,selectMesa,datapedido)=>{

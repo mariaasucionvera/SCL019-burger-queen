@@ -1,7 +1,8 @@
 .vistaCocina{
-    background-color: black;
+    background-color: #303030;
     display:flex;
     flex-wrap:wrap;
+    
 
 }
 .titulos{
@@ -19,7 +20,7 @@
 
 .orderContainer{
     
-    color: gray;
+    color: #303030;
     margin:0px auto;
     display:grid;
     grid-template-columns:repeat(3,3fr);
@@ -32,14 +33,14 @@
 
 
 .pedido{
-    background-color: bisque;
+    background-color:#ffce6d;
     border-radius: 10px;
     margin: 10px;
     display:grid ;
     grid-template-rows:.5fr 2fr;  
     padding: 10px;
     border-style: solid;
-    border-color: rgba(199, 187, 19, 0.842);
+    border-color: bisque;
 } 
 
 .formPedido{
@@ -47,10 +48,14 @@
     display: grid;
     grid-template-rows: repeat(3,20px);
     padding-left: 20px;
+    margin-bottom: 10%;
+
 }
 
 .SectionItems{
-    padding:40px 20px 20px 20px; 
+    padding:40px 20px 20px 20px;
+    border-radius: 10%; 
+    background-color: bisque;
     
 
 }

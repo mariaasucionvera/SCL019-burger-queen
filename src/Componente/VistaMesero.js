@@ -1,6 +1,6 @@
 
 import React,{useState} from "react";
-import "../Componente/VistaMesero.css"
+import "../css/VistaMesero.css"
 import Desayuno from '../MenusJson/Desayuno.json'
 import Almuerzo from '../MenusJson/Almuerzo.json'
 import { EnviarPedido } from "../firebase/firebase";
@@ -20,7 +20,7 @@ const VistaMesero = () => {
 
     const enviarMesa =(e)=>{
         setSelectMesa(e.target.value)
-
+        
     }
 
     const guardarMeserx =(e)=>{
@@ -35,13 +35,16 @@ const VistaMesero = () => {
 
    
     const agregarAlPerido =(item)=>{
+        console.log(item.id);
         setDatapedido([...datapedido,{...item}])
-         
+       
     }
 
     //Función botón eliminar producto del pedido
 
-    const eliminarProducto =(id)=>{
+        
+    const eliminarProducto =(id)=>{ 
+        console.log("hola");
         setDatapedido(datapedido.filter((item) => item !== id))
        
     }
@@ -59,11 +62,14 @@ const VistaMesero = () => {
                     <h2>Menu Desayuno</h2>
                     {Desayuno.map((item)=> (
                         <span onClick={()=>agregarAlPerido(item)} className='ButtonPlato' key={item.id} >
+                            
                                 {item.Plato}   ${item.Precio} 
                         </span>
-                    
-                    ))}
+                        
+                    ))
 
+                    }
+                    
                 </div>
 
                 <div className="MenuAlmuerzo">
@@ -93,9 +99,9 @@ const VistaMesero = () => {
                         <input className="inputMeserx" onChange={guardarMeserx} value={dataMeserx}></input>
                     </div>
 
-                    <div className="Select">
+                    <div >
                         <label>Seleccione una mesa </label>
-                        <select onChange={enviarMesa}>
+                        <select className="Select" onChange={enviarMesa}>
                         <option value="mesa 1">Mesa 1 </option>
                         <option value="mesa 2">Mesa 2 </option>
                         <option value="mesa 3">Mesa 3 </option>
@@ -106,22 +112,24 @@ const VistaMesero = () => {
                 </form>
                 <div className="seccionPedido">
                     <h2 className="tituloPedido">Pedido</h2>
-                    <div className="itemPedido">
+                    <>
+                
                         {datapedido.map((item,id)=>(
-                            <>
-                                
-                                <div className="preparation" key={id}>
-                                    {item.Plato} 
-                                    ${item.Precio}
+                            <div className="itemPedido"> 
+
+                                <div className="divPreparation">
+                                    <span className="preparation" key={id}> {item.Plato} </span>
+                                    <span className="precio" key={id}>${item.Precio}</span>
                                 </div>
                                 <button className="buttonBasurero" onClick={()=>eliminarProducto(item)} key={id}> <i class="fa-solid fa-trash-can"></i></button>
                             
-                            </>
+                            </div>
                             
                         ))}
-                    </div>
-                    <h3 className="total">Total: ${total} </h3>
+                    </>
+                    <div className="cajaTotal"><span className="total">Total:</span> <span className="suma">${total}</span></div>
                     <button onClick={()=>EnviarPedido(dataCliente,dataMeserx,datapedido,selectMesa)}>Enviar</button>
+                    
                 </div>
             </div>
         </div>

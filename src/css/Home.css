@@ -1,0 +1,24 @@
+.linksHome{
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+ 
+} 
+
+.links{
+    font-size: 150%;
+    font-weight:bold;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    color: black;
+    width:20%;
+    margin: 10%;
+    padding: 3%;
+    border-color: bisque;
+    border-style:solid;
+    background-color:#ffce6d;
+    border-radius: 20%;
+    text-decoration: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}   
+

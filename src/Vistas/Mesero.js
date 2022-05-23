@@ -2,7 +2,7 @@
 import { VistaMesero } from "../Componente/VistaMesero";
 import {Header } from "../Componente/Header";
 /* import Pedido from "../Pedido"; */
-import "../Vistas/mesero.css"
+import "../css/mesero.css"
 
 const Mesero =()=>{
 

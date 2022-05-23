@@ -1,7 +1,7 @@
 import React from "react";
 import { Header } from "../Componente/Header";
 import PedidosCocina from "../Componente/PedidosCocina";
-import "../Vistas/Cocina.css"
+import "../css/Cocina.css"
 
 const Cocina = () => {
     return(

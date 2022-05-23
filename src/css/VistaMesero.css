@@ -1,0 +1,128 @@
+
+.vistaMesero{
+    display: grid;
+    grid-template-columns: repeat(2,1fr); 
+    margin: 0px auto;
+}
+
+.MenuContent{
+    padding: 30px;
+}
+
+.ButtonPlato{
+    background-color:#ffce6d;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    width: 90%;
+    padding: 6px;
+    border-style:solid;
+    border-color: bisque;
+    border-radius: 4%;
+    font-family: 'Skranji', cursive;
+    word-spacing: 20%;
+    color: black;
+}
+
+.pedidoMesero{
+    padding: 30px;
+    
+}
+
+.formCliente{
+    display: contents;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    column-gap: normal;
+    position: relative; 
+}
+
+ .clientName,.meserxName{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    font-size: 130%;
+
+}
+
+.inputClient,.inputMeserx{
+    width: 200px;
+    margin: 10px;
+    font-size: 110%;
+}
+
+.seccionPedido{
+    display:flex;
+    flex-direction: column;
+    position: center;
+    padding-bottom: 10%;
+
+}
+.divPreparation{
+    display: grid;
+    grid-template-columns: repeat(2, 80% 20%);
+    margin-top: 5%;
+    font-weight: bold;
+
+}
+.itemPedido{
+    display: grid;
+    grid-template-columns: repeat(2,85% 15%);
+    width: 100%;
+   
+}
+.buttonBasurero{
+
+    grid-column: 2;
+    margin-bottom:20%;
+    padding: 10px;
+    color: aliceblue;
+    border-radius: 20px;
+    background-color:transparent;
+    border-style:solid;
+    border-color: aliceblue;
+    border-radius: 40%;
+    
+}
+
+.preparation{
+    grid-column: 1;
+    font-style: oblique;
+    font-weight: bold;
+}
+.total{
+
+   text-align: left;
+
+}
+
+.suma{
+   
+    text-align: right; 
+   
+}
+.Select{
+    padding: 1%;
+    background-color: black;
+    color: antiquewhite;
+    border: none;
+    width: 30%;
+    font-size: 100%;
+
+
+}
+.cajaTotal{
+    padding-top:5%; 
+    padding-bottom: 5%;
+    display:grid;
+    grid-template-columns: repeat(2,80% 20%);
+    border-top-color: antiquewhite;
+    border-top-style: solid;
+    font-size: 150%;
+
+}
+
+
+
