@@ -1,5 +1,5 @@
 .header {
-  padding-top: 5%;
+
   width: 100%;
   display: flex;
   align-items: center;
@@ -20,14 +20,8 @@
 .happyBurger{
   font-family: 'Alfa Slab One', cursive;
   font-family: 'Fredoka One', cursive;
-  /*  font-family: 'Skranji', cursive; */
   letter-spacing: 2px;
   font-size: 300%;
 
-    /*  grid-column-start:5;
-    grid-column-end: 7; */
-
-
-
-
 }
+

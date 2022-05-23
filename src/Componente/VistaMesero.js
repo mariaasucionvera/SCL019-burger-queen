@@ -128,7 +128,7 @@ const VistaMesero = () => {
                         ))}
                     </>
                     <div className="cajaTotal"><span className="total">Total:</span> <span className="suma">${total}</span></div>
-                    <button onClick={()=>EnviarPedido(dataCliente,dataMeserx,datapedido,selectMesa)}>Enviar</button>
+                    <button className="enviar" onClick={()=>EnviarPedido(dataCliente,dataMeserx,datapedido,selectMesa)}>Enviar</button>
                     
                 </div>
             </div>
