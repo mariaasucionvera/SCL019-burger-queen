@@ -1,7 +1,7 @@
 import "../App.css";
 import React from "react";
 import {Link} from "react-router-dom"
-import { Header} from "../Componente/Header";
+import Header from "../Componente/Header";
 import "../css/Home.css"
 
 function Home(){
