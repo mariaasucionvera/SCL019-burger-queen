@@ -1,7 +1,5 @@
-//import { useState } from "react";
-import { VistaMesero } from "../Componente/VistaMesero";
-import {Header } from "../Componente/Header";
-/* import Pedido from "../Pedido"; */
+import VistaMesero from "../Componente/VistaMesero";
+import Header from "../Componente/Header";
 import "../css/mesero.css"
 import { Link } from "react-router-dom";
 

@@ -16,7 +16,7 @@ function Header(props){
     )
 
 };
-export{Header} 
+export default Header; 
 
    
 

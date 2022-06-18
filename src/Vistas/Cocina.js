@@ -1,5 +1,5 @@
 import React from "react";
-import { Header } from "../Componente/Header";
+import Header from "../Componente/Header";
 import PedidosCocina from "../Componente/PedidosCocina";
 import "../css/Cocina.css"
 import { Link } from "react-router-dom";

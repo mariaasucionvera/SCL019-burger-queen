@@ -2,11 +2,8 @@
     background-color: #303030;
     display:flex;
     flex-wrap:wrap;
-    
-
 }
 .link{
-
     position: relative;
     left:85%;
     background-color:#ffce6d;

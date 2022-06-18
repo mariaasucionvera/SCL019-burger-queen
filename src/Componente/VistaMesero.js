@@ -139,4 +139,4 @@ const VistaMesero = () => {
     
 }
 
-export {VistaMesero};
+export default VistaMesero;

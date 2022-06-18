@@ -1,7 +1,7 @@
 import React from "react";
 import { useState,useEffect } from "react";
 import { db } from "../firebase/firebase";
-import { collection, onSnapshot, orderBy, query, deleteDoc, doc } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore.js";
+import { collection, onSnapshot, orderBy, query, deleteDoc, doc } from "firebase/firestore";
 
 
 
